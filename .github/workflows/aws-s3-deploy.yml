@@ -19,7 +19,7 @@ jobs:
         run: npm run build
 
       - name: Delpoy to S3 bucket
-        uses: aws-actions/s3-sync@v2
+        uses: reggionick/s3-deploy@v4
         with:
           region: ${{ secrets.AWS_REGION }}
           bucket: ${{ secrets.AWS_BUCKET }}
