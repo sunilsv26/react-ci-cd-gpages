@@ -21,9 +21,9 @@ jobs:
       - name: Delpoy to S3 bucket
         uses: reggionick/s3-deploy@v4
         with:
-          region: ${{ secrets.AWS_REGION }}
+          bucket-region: ${{ secrets.AWS_REGION }}
           bucket: ${{ secrets.AWS_BUCKET }}
-          source-dir: "./dist"
+          folder: "dist"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
